@@ -3,21 +3,21 @@
 This project is meant as a launchpad for people receiving mentorship from me (and in the future, hopefully, others).
 As such, there are a few code guidelines to follow.
 
-###Code style guide
+### Code style guide
 Rules here will be added as needed.
 
-#####General
+##### General
 * Even though rules are meant to be broken, you need to understand the rules before you know when and why to break them
     * That being said, if your mentor tells you to break a rule or a guideline, always ask for an explanation
     * Conventions and rules are only useful as long as they don't hinder more than they help
 * This project uses 4 spaces for indentation. Use 4 spaces to keep consistency and help keep git merges as hassle free as possible.
     * Other projects might use tabs (usually equivalent to 4 spaces) or 2 spaces, in which case, for those projects, be sure to follow that project's conventions.
 
-#####HTML
+##### HTML
 * IDs and classes must be `camelCase` (unless imported from an external library)
 * Try and use html5 tags where appropriate (header, footer, main, aside, nav)
 
-#####JS / TS
+##### JS / TS
 * If you find that you used the same or *very* similar code in two spots you should try to extract that code into a component, service or a function.
     * **D**on't **R**epeat **Y**ourself (**DRY**) 
 ___
