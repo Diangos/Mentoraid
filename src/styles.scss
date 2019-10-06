@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+$color-main: #fa5b1a;
+$color-second: #ffcc00;
+$color-light-text: #333333;
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", "Helvetica", "Open Sans", "Trebuchet MS", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}

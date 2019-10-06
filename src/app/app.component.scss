@@ -1,0 +1,17 @@
+@import "src/styles";
+
+nav {
+    background-color: $color-main;
+    color: white;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            width: auto;
+            margin: 0 10px;
+        }
+    }
+}
