@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
+import { FormBuilder } from '@angular/forms';
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -7,10 +9,25 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-    constructor() {
+    title: string = "Member Login";
+
+    userProfileForm = this.formBuilder.group({
+        userName: [''],
+        userPassword: [''],
+        rememberMe: [true]
+
+
+    });
+
+    constructor(private formBuilder: FormBuilder) {
     }
 
     ngOnInit() {
+          
+    }
+
+    onSubmit(){
+        console.warn(this.userProfileForm);
     }
 
 }

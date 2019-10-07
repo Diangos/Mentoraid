@@ -1,0 +1,54 @@
+.body {
+    background: rgba(50, 124, 102, 0.356);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        text-align: center;
+        background: rgba(50, 80, 124, 0.356);
+        width: 40%;
+        padding-top: 2em;
+        padding-bottom: 0;
+        color: white;
+
+        .central-icon{
+            
+
+            i {
+                
+            }
+        }
+
+        .main-form {
+            border: 3px solid white;
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto;
+        
+        button {
+                display: inline-block;
+        }
+
+        .remember{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        }
+        footer {
+            .register{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+ 
+
+
+
