@@ -8,30 +8,37 @@
             <div class="title">
                 <h3>{{title | uppercase }}</h3>
             </div>
+            <div>
             <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
                 <div class="userName">
-                    <i class="fas fa-user"></i>
+                    <div class="userIcon">
+                        <i class="fas fa-user fa-2x"></i>
+                    </div>
                     <!-- <label for="userName">User Name:</label> -->
-                    <input id="userName" type="text" formControlName="userName" placeholder="User Name">
+                    <input id="userInput" type="text" formControlName="userName" placeholder="      User Name">
                 </div>
 
                 <div class="userPassword">
-                    <i class="fas fa-lock"></i>
+                    <div class="passwordIcon">
+                        <i class="fas fa-lock fa-2x"></i>
+                    </div>
                     <!-- <label for="userPassword">Password:</label> -->
-                    <input id="userPassword" type="text" formControlName="userPassword" placeholder="*************">
+                    <input id="userPassword" type="text" formControlName="userPassword" placeholder="       *************">
                 </div>
-
-                <button type="submit" [disabled]="!userProfileForm.valid">Login</button>
+                <div class="button">
+                    <button type="submit" [disabled]="!userProfileForm.valid">Login</button>
+                </div>
                 <div class="remember">
                     <div class="rememberMe">
-                        <input id="rememberMe" type="checkbox" formControlName="rememberMe"> 
-                        <label for="rememberMe">Remember Me</label>
+                        <input id="rememberMeCheckbox" type="checkbox" formControlName="rememberMe"> 
+                        <label for="rememberMeCheckbox">Remember Me ?</label>
                     </div>
             
                     <a href="#" routerLink="/test">Forgot Password</a>
                 </div>
                 
             </form>
+            </div>
         </div>
         <footer>
             <div class="register">
