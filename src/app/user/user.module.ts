@@ -4,12 +4,18 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
+
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations: [DashboardComponent, LoginComponent],
+    declarations: [DashboardComponent, LoginComponent, RegisterComponent],
     imports: [
         CommonModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterModule,
+        FormsModule
     ],
 })
 export class UserModule {

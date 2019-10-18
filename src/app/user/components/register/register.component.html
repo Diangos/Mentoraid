@@ -1,0 +1,80 @@
+
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="central-icon">
+            <i class="fas fa-user fa-3x"></i>
+        </div>
+        <div class="main-form">
+            <div class="title">
+                <h3>{{title | uppercase }}</h3>
+            </div>
+            <div>
+                <form [formGroup]="registerProfileForm" (ngSubmit)="onSubmit()">
+                    <div class="fullNameContainer">
+                        <label for="fullName">
+                            <div class="fullNameIcon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <input id="fullName" type="text" formControlName="fullName" placeholder="      FullName">
+                        </label>
+                    </div>
+                    <div class="userNameContainer">
+                        <label for="userName">
+                            <div class="userNameIcon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <input id="userName" type="text" formControlName="userName" placeholder="      UserName">
+                        </label>
+                    </div>
+                    <div class="emailContainer">
+                        <label for="email">
+                            <div class="emailIcon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <input id="email" type="text" formControlName="email" placeholder="      Email">
+                        </label>
+                    </div>
+                    <div class="passwordContainer">
+                        <label for="password">
+                            <div class="passwordIcon">
+                                <i class="fas fa-lock-open"></i>
+                            </div>
+                            <input id="password" type="text" formControlName="password" placeholder="      Password">
+                        </label>
+                    </div>
+                    <div class="confirmPasswordContainer">
+                        <label for="confirmPassword">
+                            <div class="passwordIcon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <input id="confirmPassword" type="text" formControlName="confirmPassword" placeholder="      Confirm Password">
+                        </label>
+                    </div>
+                    <div class="technologyContainer">
+                        <label for="technology">
+                            <div class="technologyIcon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <select formControlName="technologyIntrestedIn">
+                                <option disabled>Select Technology</option>
+                                <option >Select Your Technology</option>
+                                <option *ngFor="let technology of technologies">{{technology}}</option>
+                            </select>     
+                        </label>  
+                    </div>
+                    <button class="registerBtn">Register</button>       
+                </form>
+            </div>
+            
+        </div>
+        <div class="goHome">
+            <h5>Have you changed your mind ?</h5>
+            <a href="#">Back to Home</a>
+            
+        </div>
+        <button class="backBtn" type="button" (click)="goBack()">Back</button>
+    </div>
+</body>

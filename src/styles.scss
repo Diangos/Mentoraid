@@ -12,3 +12,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+input, select {
+    height: 2rem;
+    font-size: 1rem;
+    display: inline-block;
+    outline: none;
+    border: 0;
+}

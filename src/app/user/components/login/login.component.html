@@ -1,4 +1,5 @@
-<div class="body">
+
+<body>
     <div class="container">
         <div class="central-icon">
             <i class="fas fa-users fa-4x"></i>
@@ -10,25 +11,30 @@
             </div>
             <div>
             <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
-                <div class="userName">
-                    <div class="userIcon">
-                        <i class="fas fa-user fa-2x"></i>
-                    </div>
-                    <!-- <label for="userName">User Name:</label> -->
-                    <input id="userInput" type="text" formControlName="userName" placeholder="      User Name">
+                <div class="userNameContainer">
+                    
+                    <label for="userName">
+                        <div class="userIcon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input id="userName" type="text" formControlName="userName" placeholder="      User Name">
+                    </label>
                 </div>
 
-                <div class="userPassword">
-                    <div class="passwordIcon">
-                        <i class="fas fa-lock fa-2x"></i>
-                    </div>
-                    <!-- <label for="userPassword">Password:</label> -->
-                    <input id="userPassword" type="text" formControlName="userPassword" placeholder="       *************">
+                <div class="userPasswordContainer">
+                    
+                    <label for="userPassword">
+                            <div class="passwordIcon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        <input id="userPassword" type="text" formControlName="userPassword" placeholder="       Password">
+                    </label>
                 </div>
-                <div class="button">
-                    <button type="submit" [disabled]="!userProfileForm.valid">Login</button>
+                <div class="buttonContainer">
+                    <!-- de ce butonul de dashboard functioneaza doar daca avem (click)="login()" ?? nu vad legatura intre ele ?? adica cand dau click pe link nu este chemata functia ???? -->
+                        <button type="button" [disabled]="!userProfileForm.valid" routerLink="/dashboard" (click)="login()" >Login</button>
                 </div>
-                <div class="remember">
+                <div class="rememberContainer">
                     <div class="rememberMe">
                         <input id="rememberMeCheckbox" type="checkbox" formControlName="rememberMe"> 
                         <label for="rememberMeCheckbox">Remember Me ?</label>
@@ -43,11 +49,12 @@
         <footer>
             <div class="register">
                 <p class="registerText">Don't have an account ?</p>
-                <a class="registerLink" href="#" routerLink="/test">Register Here</a>
+                <!-- <a routerLink="/register">register</a> -->
+                <a class="registerLink" routerLink="/register">Register Here</a>
             </div>
             <div class="author">
                 <p>Designed by <span><i class="fas fa-book-reader"></i></span> MPA</p>
             </div>
         </footer>
     </div>
-</div>
+</body>
