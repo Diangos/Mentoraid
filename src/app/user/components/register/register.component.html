@@ -1,80 +1,53 @@
 
-<body>
-    <br>
-    <br>
-    <br>
+<main>
     <div class="container">
         <div class="central-icon">
             <i class="fas fa-user fa-3x"></i>
         </div>
         <div class="main-form">
-            <div class="title">
-                <h3>{{title | uppercase }}</h3>
-            </div>
-            <div>
-                <form [formGroup]="registerProfileForm" (ngSubmit)="onSubmit()">
-                    <div class="fullNameContainer">
-                        <label for="fullName">
-                            <div class="fullNameIcon">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <input id="fullName" type="text" formControlName="fullName" placeholder="      FullName">
-                        </label>
+            <h3>Registration form</h3>
+            <form [formGroup]="registerProfileForm" (ngSubmit)="onSubmit()">
+                    <div class="inputContainer">
+                        <label for="fullName"><i class="fas fa-user"></i></label>
+                        <input id="fullName" type="text" formControlName="fullName" placeholder="FullName">
                     </div>
-                    <div class="userNameContainer">
-                        <label for="userName">
-                            <div class="userNameIcon">
-                                <i class="fas fa-smile"></i>
-                            </div>
-                            <input id="userName" type="text" formControlName="userName" placeholder="      UserName">
-                        </label>
+
+                    <div class="inputContainer">
+                        <label for="userName"><i class="fas fa-smile"></i></label>
+                        <input id="userName" type="text" formControlName="userName" placeholder="UserName">
                     </div>
-                    <div class="emailContainer">
-                        <label for="email">
-                            <div class="emailIcon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <input id="email" type="text" formControlName="email" placeholder="      Email">
-                        </label>
+
+                    <div class="inputContainer">
+                        <label for="email"><i class="fas fa-envelope"></i></label>
+                        <input id="email" type="text" formControlName="email" placeholder="Email">
                     </div>
-                    <div class="passwordContainer">
-                        <label for="password">
-                            <div class="passwordIcon">
-                                <i class="fas fa-lock-open"></i>
-                            </div>
-                            <input id="password" type="text" formControlName="password" placeholder="      Password">
-                        </label>
+
+                    <div class="inputContainer">
+                        <label for="password"><i class="fas fa-lock-open"></i></label>
+                        <input id="password" type="text" formControlName="password" placeholder="Password">
                     </div>
-                    <div class="confirmPasswordContainer">
-                        <label for="confirmPassword">
-                            <div class="passwordIcon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                            <input id="confirmPassword" type="text" formControlName="confirmPassword" placeholder="      Confirm Password">
-                        </label>
+
+                    <div class="inputContainer">
+                        <label for="confirmPassword"><i class="fas fa-lock"></i></label>
+                        <input id="confirmPassword" type="text" formControlName="confirmPassword" placeholder="Confirm Password">
                     </div>
-                    <div class="technologyContainer">
-                        <label for="technology">
-                            <div class="technologyIcon">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                            <select formControlName="technologyIntrestedIn">
-                                <option disabled>Select Technology</option>
-                                <option >Select Your Technology</option>
-                                <option *ngFor="let technology of technologies">{{technology}}</option>
-                            </select>     
-                        </label>  
+
+                    <div class="inputContainer">
+                        <label for="technology"><i class="fas fa-chalkboard-teacher"></i></label>
+                        <select formControlName="technologyIntrestedIn" id="technology">
+                            <option value="">Select Your Technology</option>
+                            <option *ngFor="let technology of technologies">{{technology}}</option>
+                        </select>
                     </div>
-                    <button class="registerBtn">Register</button>       
+
+                    <button type="submit" class="button primary register">Register</button>
                 </form>
-            </div>
-            
+
         </div>
-        <div class="goHome">
-            <h5>Have you changed your mind ?</h5>
-            <a href="#">Back to Home</a>
-            
-        </div>
-        <button class="backBtn" type="button" (click)="goBack()">Back</button>
+        <footer>
+            <div id="backButtonExplanation">Have you changed your mind?</div>
+            <a routerLink="/" class="button">Back to Home</a>
+            <button class="button back" type="button" (click)="goBack()">Back</button>
+        </footer>
     </div>
-</body>
+</main>

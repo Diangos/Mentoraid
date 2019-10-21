@@ -1,40 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Location } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import {Location} from '@angular/common';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+    technologies: any = ['Java', 'JavaScript', 'HTML', 'SCSS'];
 
-  title: string = 'registration form';
+    registerProfileForm = this.fb.group({
+        fullName: [''],
+        userName: [''],
+        email: [''],
+        password: [''],
+        confirmPassword: [''],
+        technologyIntrestedIn: ['']
+    });
 
-  public selectedTechnology;
+    constructor(private fb: FormBuilder,
+                private location: Location) {
+    }
 
-  technologies: any = ['Java', 'JavaScript', 'HTML', 'SCSS']
+    ngOnInit() {
+    }
 
-  registerProfileForm = this.fb.group({
-    fullName: [''],
-    userName: [''],
-    email: [''],
-    password: [''],
-    confirmPassword: [''],
-    technologyIntrestedIn: ['']
-  })
-  constructor(private fb: FormBuilder,
-              private location: Location) { }
+    onSubmit() {
+        // TODO: Use EventEmitter with form value
+        console.warn(this.registerProfileForm);
+        alert(JSON.stringify(this.registerProfileForm.value));
+    }
 
-  ngOnInit() {
-  }
-  onSubmit() {
-  // TODO: Use EventEmitter with form value
-    console.warn(this.registerProfileForm);
-    alert(JSON.stringify(this.registerProfileForm.value))
-  }
-  
-  goBack(){
-    this.location.back();
-  }
+    goBack() {
+        this.location.back();
+    }
 }
