@@ -4,13 +4,13 @@ import {LogInGuard} from './shared/guards/log-in.guard';
 import {PageNotFoundComponent} from './shared/components/page-not-found/page-not-found.component';
 import {LoginComponent} from './user/components/login/login.component';
 import {DashboardComponent} from './user/components/dashboard/dashboard.component';
-import {HomeComponent} from './home/components/home/home.component';
+//import {HomeComponent} from './home/components/home/home.component';
 import {RegisterComponent} from './user/components/register/register.component';
 
 
 const routes: Routes = [{
     path: '',
-    component: HomeComponent,
+    component: LoginComponent,
     pathMatch: 'full'
 }, {
     path: 'login',

@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
 import {SharedModule} from './shared/shared.module';
 import {UserModule} from './user/user.module';
-import {HomeModule} from './home/home.module';
+//import {HomeModule} from './home/home.module';
 
 import {AppComponent} from './app.component';
 
@@ -18,7 +18,7 @@ import {AppComponent} from './app.component';
         AppRoutingModule,
         RouterModule,
         SharedModule,
-        HomeModule,
+        //HomeModule,
         UserModule,
     ],
     providers: [],
