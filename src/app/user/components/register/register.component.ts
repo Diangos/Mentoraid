@@ -5,7 +5,7 @@ import {Location} from '@angular/common';
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
-    styleUrls: ['./register.component.scss']
+    styleUrls: ['./register.component.scss', './../user.common.scss']
 })
 export class RegisterComponent implements OnInit {
     technologies: any = ['Java', 'JavaScript', 'HTML', 'SCSS'];
