@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
-
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
