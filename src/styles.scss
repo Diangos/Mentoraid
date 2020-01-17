@@ -12,3 +12,37 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+input, select {
+    padding: 5px;
+    height: 2rem;
+    font-size: 1rem;
+    display: inline-block;
+    outline: none;
+    border: none;
+}
+
+.button {
+    //position
+    //display (box-model)
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border-radius: 4px;
+
+    //other
+    background-color: #333333;
+    color: white;
+    border: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all ease-out 250ms;
+
+    &:hover {
+        box-shadow: 0 4px 9px -5px #000000;
+    }
+
+    &.primary {
+        background-color: $color-main;
+    }
+}

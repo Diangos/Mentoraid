@@ -3,7 +3,10 @@
 nav {
     background-color: $color-main;
     color: white;
-
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
     ul {
         margin: 0;
         padding: 0;

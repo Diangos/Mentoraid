@@ -1,1 +1,40 @@
-<p>login works!</p>
+
+<main>
+    <div class="container">
+        <div class="central-icon">
+            <i class="fas fa-users fa-4x"></i>
+        </div>
+
+        <div class="main-form">
+            <h3>MEMBER LOGIN</h3>
+            <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+                <div class="inputContainer">
+                    <label for="userName"><i class="fas fa-user"></i></label>
+                    <input id="userName" type="text" formControlName="userName" placeholder="User Name">  
+                </div>
+
+                <div class="inputContainer">
+                    <label for="userPassword"><i class="fas fa-lock"></i></label>
+                    <input id="userPassword" type="text" formControlName="userPassword" placeholder="Password">
+                </div>
+                
+                <button type="button" class="button primary loginBtn" [disabled]="!userProfileForm.valid" routerLink="/dashboard" (click)="login()" >Login</button>
+                
+                <div class="rememberContainer">
+                    <div class="rememberMe">
+                        <input id="rememberMeCheckbox" type="checkbox" formControlName="rememberMe"> 
+                        <label for="rememberMeCheckbox">Remember Me ?</label>
+                    </div>
+            
+                    <a href="#" routerLink="/test">Forgot Password</a>
+                </div> 
+            </form> 
+        </div>
+        <footer>
+            
+            <p class="registerText">Don't have an account ?</p>
+            <a class="button" routerLink="/register">Register Here</a>
+            <div class="designedIcon">Designed by<i class="fas fa-book-reader"></i>MPA</div>
+        </footer>
+    </div>
+</main>
