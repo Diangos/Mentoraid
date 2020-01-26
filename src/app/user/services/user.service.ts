@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
     providedIn: 'root'
 })
 export class UserService {
-    private loggedIn = false;
+    private loggedIn = true;  // aici era private loggedIn = false;
 
     set isLoggedIn(value: boolean) {
         this.loggedIn = value;
