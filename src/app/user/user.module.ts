@@ -8,9 +8,13 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DashboardMembersComponent } from './components/dashboard/dashboard-members/dashboard-members.component';
+import { DashboardMessagesComponent } from './components/dashboard/dashboard-messages/dashboard-messages.component';
+import { DashboardAnalyticsComponent } from './components/dashboard/dashboard-analytics/dashboard-analytics.component';
+import { DashboardTechnologyComponent } from './components/dashboard/dashboard-technology/dashboard-technology.component';
 
 @NgModule({
-    declarations: [DashboardComponent, LoginComponent, RegisterComponent],
+    declarations: [DashboardComponent, LoginComponent, RegisterComponent, DashboardMembersComponent, DashboardMessagesComponent, DashboardAnalyticsComponent, DashboardTechnologyComponent],
     imports: [
         CommonModule,
         ReactiveFormsModule,

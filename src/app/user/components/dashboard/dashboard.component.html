@@ -6,45 +6,46 @@
     <br> -->
 </div>
 <main>
-<!-- <div class="main-dashboard"> -->
 
     <div class="container">
+        
         <header>
             <div class="header-left">
-                <a href="#">Mentoraid</a>
+                <a href="#">
+                    <span class="span-border"><i class="fab fa-dashcube"></i></span>
+                    <span class="span-text">DASHBOARD</span>
+                </a>
             </div>
             <div class="header-right">
                 <a href="#" routerLink="/test">HELP/SUPPORT</a>
                 <a href="#" routerLink="/test">SETTINGS</a>
                 <a href="#" routerLink="/test">UserIcon/Image</a>
-                <!-- <div><button type="button" class="header-button"></button></div>
-                <div><button type="button" class="header-button">SETTINGS</button></div>
-                <div><button type="button" class="header-button">UserIcon/Image</button></div> -->
             </div>    
-        </header>
+        </header> 
+        
         <div class="wrapper">
             <aside>
                 <nav>
                     <div>
-                        <a href="#">
-                            <span class="span-border"><i class="fa fa-user"></i></span>
-                            <span class="span-text">Users</span>
+                        <a routerLink="/dashboard/members">
+                            <span class="span-border"><i class="fas fa-theater-masks"></i></span>
+                            <span class="span-text">Members</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
+                        <a routerLink="/dashboard/messages">
                             <span class="span-border"><i class="fas fa-envelope-open-text"></i></span>
                             <span class="span-text">Messages</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
+                        <a routerLink="/dashboard/analytics">
                             <span class="span-border"><i class="fa fa-chart-bar"></i></span>
                             <span class="span-text">Analytics</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
+                        <a routerLink="/dashboard/technology">
                             <span class="span-border"><i class="fas fa-laptop-code"></i></span>
                             <span class="span-text">Technology</span>
                         </a>
@@ -52,17 +53,9 @@
                 </nav>
             </aside>
             <div class="main-display">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo tenetur quas cumque nam dolorem.
-                    Assumenda harum doloribus repellat nihil expedita ipsum, cumque quasi, distinctio modi fuga
-                    nisi quidem et porro consectetur nam cupiditate illo est perspiciatis? Ex porro illo alias at
-                    assumenda accusamus excepturi impedit, neque sint earum rem, amet, aperiam quos adipisci vel
-                    placeat culpa eveniet commodi reiciendis! Inventore voluptatibus laborum sapiente iusto?
-                    Quidem illum consequuntur asperiores unde, animi deleniti ad, excepturi distinctio voluptas
-                    quasi nam ipsam rerum repellat natus ipsum nesciunt vitae error! Quam, laboriosam hic assumenda
-                    aut minima fugiat deleniti, et quo veniam nihil nobis unde magnam!
-                </p>
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
-<!-- </div> -->
+
 </main>
