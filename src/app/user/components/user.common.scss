@@ -1,55 +1,18 @@
-main {
-    padding: 10px;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import "src/colors";
 
-    .container {
+.wrapper {
+    width: 400px;
+    margin: auto;
+    border: 1px solid $color-lighter-grey;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 12px -10px rgba(0, 0, 0, 0.5);
+
+    > header, > footer {
         text-align: center;
-        background: rgba(25, 67, 129, 0.356);
-        width: 40%;
-        padding-top: 2em;
-        padding-bottom: 0;
-        color: white;
-        box-shadow: 0px 0px 8px 6px #888888;
+    }
 
-        .central-icon {
-            margin-bottom: 0.8rem;
-        }
-        .main-form {
-            border: 3px solid white;
-            border-radius: 10px;
-            width: 80%;
-            margin: 0 auto;
-
-            .inputContainer {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-top: 1em;
-
-                label {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-
-                    .fas {
-                        background: rgb(128, 10, 55);
-                        display: inline-block;
-                        padding: 8px;
-                        border-top-left-radius: 10px;
-                        border-bottom-left-radius: 10px;
-                    }
-                }
-            }
-        }
-    }   
-
-           
-           
-        
-    
+    > main {
+        padding: 10px;
+    }
 }

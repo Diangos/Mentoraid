@@ -1,13 +1,20 @@
-<nav>
-    <div class="logo">
-<!--        Logo here-->
-    </div>
-    <ul class="topMenu">
-        <li><a routerLink="/">Home</a></li>
-        <li>Mentoring and mentors</li>
-        <li><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a routerLink="/login">Login</a></li>
-        
-    </ul>
-</nav>
-<router-outlet></router-outlet>
+<header>
+    <nav>
+        <div class="logo">
+            <!--        Logo here-->
+        </div>
+        <ul class="topMenu">
+            <li><a routerLink="/">Home</a></li>
+            <li>Mentoring and mentors</li>
+            <li><a routerLink="/dashboard">Dashboard</a></li>
+            <li><a routerLink="/login">Login</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>
+
+</footer>

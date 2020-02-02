@@ -1,0 +1,27 @@
+// This is a MAP of values
+$text-sizes: (
+    xs: 0.6rem,
+    sm: 0.8rem,
+    md: 1rem,
+    lg: 1.2rem,
+    xl: 1.4rem,
+    xxl: 1.6rem
+);
+
+// We need this in order to be able to iterate
+$sizeNames: xs sm md lg xl xxl;
+
+// The actual iteration. SCSS lists are 1-indexed
+@for $index from 1 through length($sizeNames) {
+    // Get the value of the nth element in the list (ex. md)
+    $size: nth($sizeNames, $index);
+
+    // This will concatenate .text to the current (nth) element in the iteration (ex. .text-md)
+    .text-#{$size} {
+        // Get the value of the map property (ex. md from $text-sizes)
+        font-size: map-get($text-sizes, $size);
+    }
+}
+
+.float-left {float: left;}
+.float-right {float: right;}

@@ -1,12 +1,26 @@
 @import "src/styles";
 
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+header, footer {
+}
+
 nav {
-    background-color: $color-main;
-    color: white;
-    height: 30px;
+    line-height: 36px;
     width: 100%;
-    padding: 5px;
-    position: absolute;
+
+    background-color: $color-main;
+    color: $color-main-contrast-text;
+
     ul {
         margin: 0;
         padding: 0;
@@ -15,6 +29,15 @@ nav {
             display: inline-block;
             width: auto;
             margin: 0 10px;
+
+            a {
+                color: $color-main-contrast-text;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-main-light-text;
+                }
+            }
         }
     }
 }
