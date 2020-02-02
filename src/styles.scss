@@ -12,12 +12,12 @@
 html, body, app-root {
     margin: 0;
     padding: 0;
-    background-color: $body-background;
     height: 100%;
 }
 
 body {
     line-height: 1.4rem;
+    background-image: url("/assets/background.svg");
 }
 
 h1, h2, h3, h4, h5, h6 {

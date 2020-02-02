@@ -17,9 +17,21 @@ Rules here will be added as needed.
 * IDs and classes must be `camelCase` (unless imported from an external library)
 * Try and use html5 tags where appropriate (header, footer, main, aside, nav)
 
+##### CSS
+* If you think the style you are writing will be used in more than just one place (ex. button or footer) then you should try to write it in common CSS or use some more general classes to generate the look you're going for.
+* For really common patterns (inputs, buttons etc.) there are probably already defined styles or classes. Search for such classes before you commit to writing your own CSS.
+
 ##### JS / TS
 * If you find that you used the same or *very* similar code in two spots you should try to extract that code into a component, service or a function.
     * **D**on't **R**epeat **Y**ourself (**DRY**) 
+___
+## Installation
+
+1. Clone or download the repository into a folder on your local machine
+2. Make sure you have node.js installed
+3. Make sure you have Angular CLI installed
+4. Go into your project folder (where you downloaded your files) and run `npm install`. If the command is failing with an error you are probably not in the right project, don't have node.js installed or haven't reopened the terminal\command prompt since installing node.js
+5. Run one of the commands below (if you just want to open the project in the browser, see 'Development server' below)
 ___
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -19,6 +19,15 @@
         text-align: center;
     }
 
+    > header {
+        color: $color-lighter-text;
+
+        img {
+            margin: 20px auto;
+            width: 90%;
+        }
+    }
+
     > main {
         padding: 10px;
     }
