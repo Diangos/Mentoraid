@@ -10,16 +10,16 @@ import {Location} from '@angular/common';
 export class RegisterComponent implements OnInit {
     technologies: any = ['Java', 'JavaScript', 'HTML', 'SCSS'];
 
-    registerProfileForm = this.fb.group({
-        fullName: [''],
-        userName: [''],
+    registerProfileForm = this.formBuilder.group({
+        firstName: [''],
+        lastName: [''],
         email: [''],
         password: [''],
         confirmPassword: [''],
-        technologyIntrestedIn: ['']
+        technologyInterestedIn: ['']
     });
 
-    constructor(private fb: FormBuilder,
+    constructor(private formBuilder: FormBuilder,
                 private location: Location) {
     }
 
@@ -28,11 +28,6 @@ export class RegisterComponent implements OnInit {
 
     onSubmit() {
         // TODO: Use EventEmitter with form value
-        console.warn(this.registerProfileForm);
         alert(JSON.stringify(this.registerProfileForm.value));
-    }
-
-    goBack() {
-        this.location.back();
     }
 }

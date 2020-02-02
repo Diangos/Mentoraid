@@ -1,0 +1,8 @@
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        clear: both;
+    }
+}

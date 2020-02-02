@@ -10,25 +10,24 @@ import { UserService } from '../../services/user.service';
 export class LoginComponent implements OnInit {
 
     userProfileForm = this.formBuilder.group({
-        userName: [''],
+        email: [''],
         userPassword: [''],
         rememberMe: [true]
     });
 
     constructor(private formBuilder: FormBuilder,
-                private userService : UserService) {
+                private userService: UserService) {
     }
 
     ngOnInit() {
-          
+
     }
 
-    onSubmit(){
+    onSubmit() {
         console.warn(this.userProfileForm);
     }
 
-    login(){
-        console.log(this.userProfileForm.value)
+    login() {
         this.userService.logIn();
     }
 

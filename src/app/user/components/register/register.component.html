@@ -1,53 +1,49 @@
 
-<main>
-    <div class="container">
-        <div class="central-icon">
-            <i class="fas fa-user fa-3x"></i>
-        </div>
-        <div class="main-form">
-            <h3>Registration form</h3>
-            <form [formGroup]="registerProfileForm" (ngSubmit)="onSubmit()">
-                    <div class="inputContainer">
-                        <label for="fullName"><i class="fas fa-user"></i></label>
-                        <input id="fullName" type="text" formControlName="fullName" placeholder="FullName">
-                    </div>
+<div class="wrapper">
+    <header>
+        <h2><i class="fas fa-users"></i> Register</h2>
+    </header>
 
-                    <div class="inputContainer">
-                        <label for="userName"><i class="fas fa-smile"></i></label>
-                        <input id="userName" type="text" formControlName="userName" placeholder="UserName">
-                    </div>
+    <main class="main-form">
+        <form [formGroup]="registerProfileForm" (ngSubmit)="onSubmit()">
+            <div class="inputContainer">
+                <label class="iconLabel" for="email" title="E-mail"><i class="fas fa-envelope"></i></label>
+                <input id="email" type="text" formControlName="email" placeholder="E-mail">
+            </div>
 
-                    <div class="inputContainer">
-                        <label for="email"><i class="fas fa-envelope"></i></label>
-                        <input id="email" type="text" formControlName="email" placeholder="Email">
-                    </div>
+            <div class="inputContainer">
+                <label class="iconLabel" for="password"><i class="fas fa-lock-open"></i></label>
+                <input id="password" type="text" formControlName="password" placeholder="Password">
+            </div>
 
-                    <div class="inputContainer">
-                        <label for="password"><i class="fas fa-lock-open"></i></label>
-                        <input id="password" type="text" formControlName="password" placeholder="Password">
-                    </div>
+            <div class="inputContainer">
+                <label class="iconLabel" for="confirmPassword"><i class="fas fa-lock"></i></label>
+                <input id="confirmPassword" type="text" formControlName="confirmPassword" placeholder="Confirm Password">
+            </div>
 
-                    <div class="inputContainer">
-                        <label for="confirmPassword"><i class="fas fa-lock"></i></label>
-                        <input id="confirmPassword" type="text" formControlName="confirmPassword" placeholder="Confirm Password">
-                    </div>
+            <div class="inputContainer">
+                <label class="iconLabel" for="firstName" title="First name"><i class="fas fa-user"></i></label>
+                <input id="firstName" type="text" formControlName="firstName" placeholder="First name">
+            </div>
 
-                    <div class="inputContainer">
-                        <label for="technology"><i class="fas fa-chalkboard-teacher technologyImg"></i></label>
-                        <select formControlName="technologyIntrestedIn" id="technology">
-                            <option value="">Select Your Technology</option>
-                            <option *ngFor="let technology of technologies">{{technology}}</option>
-                        </select>
-                    </div>
+            <div class="inputContainer">
+                <label class="iconLabel" for="lastName" title="Last name"><i class="fas fa-user"></i></label>
+                <input id="lastName" type="text" formControlName="lastName" placeholder="Last name">
+            </div>
 
-                    <button type="submit" class="button primary register">Register</button>
-                </form>
+            <div class="inputContainer">
+                <label class="iconLabel" for="technology"><i class="fas fa-chalkboard-teacher"></i></label>
+                <select formControlName="technologyInterestedIn" id="technology">
+                    <option value="">Select Your Technology</option>
+                    <option *ngFor="let technology of technologies">{{technology}}</option>
+                </select>
+            </div>
 
-        </div>
-        <footer>
-            <div id="backButtonExplanation">Have you changed your mind?</div>
-            <a routerLink="/" class="button">Back to Home</a>
-            <button class="button back" type="button" (click)="goBack()">Back</button>
-        </footer>
-    </div>
-</main>
+            <button type="submit" class="button primary text-lg float-right" [disabled]="!registerProfileForm.valid">Register</button>
+        </form>
+    </main>
+
+    <footer>
+        Already have an account? <a routerLink="/" class="text-lg">Sign in</a>
+    </footer>
+</div>
