@@ -12,7 +12,8 @@ export class LogInGuard implements CanActivate {
     canActivate(
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-        return this.userService.isLoggedIn;
+        console.log('Can this user access page?', UserService.session.isLoggedIn);
+        return UserService.session.isLoggedIn;
     }
 
 }

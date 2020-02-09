@@ -25,3 +25,33 @@
         background-color: $color-main;
     }
 }
+
+.dropdown {
+    position: relative;
+
+    .dropdownContent {
+        position: absolute;
+        right: 0;
+        left: 0;
+        display: none;
+
+    }
+
+    &:hover {
+        .dropdownContent {
+            display: inline-block;
+        }
+    }
+
+    .item {
+        display: block;
+    }
+
+    hr {
+        display: block;
+        width: 90%;
+        margin: 3px auto;
+        border: none;
+        border-top: 1px solid;
+    }
+}

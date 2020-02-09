@@ -1,0 +1,18 @@
+<div class="dropdown" *ngIf="currentSession.isLoggedIn">
+    <div class="user">
+        <i class="fas fa-user"></i>
+        {{currentSession.username}}
+    </div>
+    <div class="dropdownContent">
+        <a class="item" [routerLink]="'dashboard'">Dashboard</a>
+        <div class="item">bibi</div>
+        <hr>
+        <div class="item" (click)="logout()" title="End your current session">Logout</div>
+    </div>
+</div>
+<div *ngIf="!currentSession.isLoggedIn">
+    <a class="user" [routerLink]="'login'">
+        <i class="fas fa-user"></i>
+        Login
+    </a>
+</div>
